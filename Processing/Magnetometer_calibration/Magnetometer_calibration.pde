@@ -17,6 +17,9 @@
   and 1.5.1: "WARNING: RXTX Version mismatch ...".
   Processing 2.0.x seems to work just fine. Later versions may too.
   Alternatively, the older version 1.2.1 also works and is still available on the web.
+
+  WARNING: You might need to ensure the decimal separator is a dot (".") in Processing 
+  and your system settings and reboot.
 */
 
 /*
@@ -47,7 +50,10 @@ final static int SERIAL_PORT_NUM = 0;
 
 import processing.opengl.*;
 import processing.serial.*;
-import java.io.*;
+//import java.io.*;
+import java.io.FileOutputStream;
+import java.io.DataOutputStream;
+import java.util.Locale;
 
 final static int SERIAL_PORT_BAUD_RATE = 57600;
 
@@ -77,6 +83,8 @@ boolean readToken(Serial serial, String token) {
 
 // Global setup
 void setup() {
+  Locale.setDefault(Locale.US);
+
   // Setup graphics
   size(800, 800, OPENGL);
   smooth();
