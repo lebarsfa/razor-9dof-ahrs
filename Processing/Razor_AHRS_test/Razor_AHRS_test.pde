@@ -15,7 +15,9 @@
 /*
   NOTE: There seems to be a bug with the serial library in Processing versions 1.5
   and 1.5.1: "WARNING: RXTX Version mismatch ...".
-  Processing 2.0.x seems to work just fine. Later versions may too.
+  Processing 2.0.x seems to work just fine. Later versions may too. Snap versions of Processing 4.x 
+  might not have access to the serial ports, if needed try with portable versions available from 
+  https://github.com/processing/processing4/releases...
   Alternatively, the older version 1.2.1 also works and is still available on the web.
 */
 
